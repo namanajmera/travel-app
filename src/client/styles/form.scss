@@ -1,0 +1,179 @@
+body {
+  background: #fffff8;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  padding: 0;
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  min-height: 100vh;
+
+  #app {
+    flex: 2;
+    background: #f7e0e4;
+    color: #2D3748;
+    justify-content: center;
+    font-size: 20px;
+    font-family: 'Garamond', sans-serif;
+
+    .travelContainer {
+      margin: 60px 200px;
+
+      .form-container {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  .holderContainer {
+    &.entryDetails {
+      background: rgba(133, 72, 82, .4);
+      min-height: 450px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .dataCardInformation {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        p {
+            margin: 0;
+        }
+
+        div {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+    }
+
+    label {
+      display: block;
+      font-size: 20px;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 24px;
+    }
+
+
+    input {
+      display: block;
+      height: 60px;
+      width: 100%;
+      color: #000002;
+      font-size: 20px;
+      font-family: 'Garamond', sans-serif;
+      border: none;
+    }
+
+    /* Reset style for HTML element on active to have no border*/
+    input:focus,
+    select:focus,
+    textarea:focus,
+    button:focus {
+      outline: none;
+    }
+
+    /* Style for Placeholder Text*/
+    ::placeholder {
+      /* Firefox, Chrome, Opera */
+      color: darkgray;
+      font-family: 'Garamond', sans-serif;
+
+    }
+
+    :-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: darkgray;
+      font-family: 'Garamond', sans-serif;
+
+    }
+
+    ::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: darkgray;
+      font-family: 'Garamond', sans-serif;
+
+    }
+  }
+
+  button {
+    width: 100%;
+    display: block;
+    height: 50px;
+    background: #e51d56;
+    color: #FFFFFF;
+    font-size: 26px;
+    font-family: 'Garamond', sans-serif;
+    border: none;
+    box-shadow: 2px 4px 5px #444;
+    margin: 10px 0;
+    cursor: pointer;
+
+    &:hover {
+      background: #ff385c;
+    }
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  ::-webkit-calendar-picker-indicator {
+    background-color: white
+  }
+
+  input[type=date] {
+    font-size: 25px;
+  }
+
+  ::-webkit-datetime-edit-text {
+    color: #555555
+  }
+
+  ::-webkit-datetime-edit-month-field {
+    color: #555555
+  }
+
+  ::-webkit-datetime-edit-day-field {
+    color: #555555;
+  }
+
+  ::-webkit-datetime-edit-year-field {
+    color: #555555;
+  }
+
+  ::-webkit-calendar-picker-indicator {
+    background-image: url(http://icons.iconarchive.com/icons/dakirby309/simply-styled/256/Calendar-icon.png);
+    background-position: center;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    color: rgba(204, 204, 204, 0);
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .travelContainer {
+    padding: 10px;
+
+    #dataCardInformation {
+      div {
+        img {
+          max-width: 270px;
+        }
+
+        p {
+          font-size: 15px;
+          line-height: 1;
+        }
+      }
+    }
+  }
+}

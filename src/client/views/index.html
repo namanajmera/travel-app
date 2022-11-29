@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Application</title>
+</head>
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+      <h1>Travelling App</h1>
+    </header>
+  <div id="app">
+
+    <div class="travelContainer">
+
+      <!-- Form Container for submit details.... -->
+      <form 
+        class="form-container" 
+        onsubmit="return Client.handleFormSubmit(event)">
+        <div class="holderContainer">
+
+          <div>
+            <label for="input">You're Travelling To :</label>
+            <!-- Input type text for enter the city. -->
+            <input id="city" type="text" name="input" value="" placeholder="Enter City Name Here :">
+          </div>
+
+          <div>
+            <label for="date">Select Travel Date :</label>
+            <!-- Input type data for entering date. -->
+            <input type="date" id="date" name="date" value="">
+          </div>
+        </div>
+        <!-- Button to submit. -->
+        <div>
+          <button 
+              id="submit" 
+              type="submit" 
+              onsubmit="return Client.handleFormSubmit(event)"
+              onclick="return Client.handleFormSubmit(event)"> Submit </button>
+          <!-- Button to Reset the input type and data render part. -->
+          <button 
+              id="reset" 
+              type="reset" 
+              onreset="return Client.handleReset(event)" 
+              onclick="return Client.handleReset(event)"> Reset </button>
+        </div>
+      </form>
+
+      <!-- Data show container. -->
+      <div class="holderContainer entryDetails">
+        <h1 id="headerDetails" class="title">Updated Details...</h1>
+        <!-- Data will show here.... -->
+        <div id="dataCardInformation"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <strong>Travel App</strong>
+    <p><span> Privacy Policy <span>© <script>document.write(new Date().getFullYear())</script> All Rights Reserved</span>, Naman Ajmera </span>
+    </p>
+  </footer>
+
+  <script>
+    // Check that service workers are supported
+    if ('serviceWorker' in navigator) {
+      // Use the window load event to keep the page load performant
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js');
+      });
+    }
+  </script>
+</body>
+
+</html>
